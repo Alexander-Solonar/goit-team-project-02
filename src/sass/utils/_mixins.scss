@@ -1,0 +1,55 @@
+@mixin mobile-only {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+// @mixin mobile-down {
+//   @media screen and (max-width: 319px) {
+//     @content;
+//   }
+// }
+
+@mixin mobile-up {
+  @media screen and (min-width: 320px) {
+    @content;
+  }
+}
+
+@mixin bigger-mobile-up {
+  @media screen and (min-width: 400px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin flex($type: flex, $justify: center, $align: center) {
+  display: $type;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin text-shorten($lines) {
+  @if $lines !=null {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  } @else {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+  }
+}

@@ -1,0 +1,11 @@
+.news {
+  padding-bottom: 60px;
+
+  @include tablet-up {
+    padding-bottom: 100px;
+  }
+
+  @include desktop-up {
+    padding-bottom: 150px;
+  }
+}
