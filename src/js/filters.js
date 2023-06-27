@@ -6,7 +6,7 @@ const nytService = new NytService();
 
 async function creatMarkupFilter() {
   const arrayCategories = await nytService.fetchCategories();
-
+  console.log(arrayCategories);
   const nameCategories = arrayCategories.map(
     ({ display_name }) => display_name
   );
